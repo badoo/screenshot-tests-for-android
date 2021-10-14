@@ -452,7 +452,7 @@ def android_path_join(a, *args):
 
 def pull_metadata(package, dir, adb_puller):
     root_screenshot_dir = android_path_join(
-        adb_puller.get_external_data_dir(), "screenshots"
+        adb_puller.get_files_dir(package), "screenshots"
     )
     metadata_file = android_path_join(
         root_screenshot_dir, package, "screenshots-default/metadata.json"

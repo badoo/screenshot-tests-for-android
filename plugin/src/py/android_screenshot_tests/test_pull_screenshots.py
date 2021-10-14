@@ -96,8 +96,8 @@ class AdbPuller:
         if not src.startswith("/"):
             raise RuntimeError("src must be absolute, not: " + src)
 
-    def get_external_data_dir(self):
-        return "/sdcard"
+    def get_files_dir(self, package):
+        return "/data/data/{}/files".format(package)
 
     def _copy(self, src, dst):
         try:

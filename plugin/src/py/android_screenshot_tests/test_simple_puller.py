@@ -56,14 +56,8 @@ class TestSimplePuller(unittest.TestCase):
         self.puller = SimplePuller(["-s", self.serial])
         self.test_pull_integration()
 
-    def test_get_external_data_dir(self):
-        accepted_dirs = [
-            "/mnt/sdcard",
-            "/sdcard",
-            "/storage/sdcard",
-            "/storage/emulated/legacy",
-        ]
-        self.assertIn(self.puller.get_external_data_dir(), accepted_dirs)
+    def test_get_files_dir(self):
+        self.assertEqual(self.puller.get_files_dir("com.foo"), "/data/data/com.foo/files")
 
     def test_pull_folder(self):
         target_remote_folder = "/sdcard/folder"
