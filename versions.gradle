@@ -15,7 +15,7 @@
  */
 
 ext {
-  final screenshotTestVersion = VERSION_NAME
+  final screenshotTestVersion = "0.14.0"
   final dexmakerVersion = "1.4"
   final lithoVersion = "0.40.0"
 
