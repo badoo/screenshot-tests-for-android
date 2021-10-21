@@ -227,7 +227,7 @@ public class AlbumImpl implements Album {
     Tiling tiling = recordBuilder.getTiling();
     for (int i = 0; i < tiling.getWidth(); i++) {
       for (int j = 0; j < tiling.getHeight(); j++) {
-        File file = new File(mDir, generateTileName(recordBuilder.getName(), i, j));
+        File file = new File(mDir, getScreenshotFilenameInternal(generateTileName(recordBuilder.getName(), i, j)));
 
         recorder
             .withAbsoluteFileName(file.getAbsolutePath())
