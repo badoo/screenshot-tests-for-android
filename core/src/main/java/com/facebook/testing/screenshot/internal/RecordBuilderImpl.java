@@ -94,6 +94,7 @@ public class RecordBuilderImpl implements RecordBuilder {
    * Set the name of the test from which this screenshot is generated. This should be detected by
    * default most of the time.
    */
+  @Override
   public RecordBuilderImpl setTestName(String testName) {
     mTestName = testName;
     return this;
@@ -107,6 +108,7 @@ public class RecordBuilderImpl implements RecordBuilder {
    * Set the class name of the TestCase from which this screenshot is generated. This should be
    * detected by default most of the time.
    */
+  @Override
   public RecordBuilderImpl setTestClass(String testClass) {
     mTestClass = testClass;
     return this;

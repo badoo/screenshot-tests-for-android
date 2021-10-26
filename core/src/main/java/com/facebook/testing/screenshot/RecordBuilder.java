@@ -69,6 +69,10 @@ public interface RecordBuilder {
    */
   public RecordBuilder setMaxPixels(long maxPixels);
 
+  RecordBuilder setTestName(String testName);
+
+  RecordBuilder setTestClass(String testClass);
+
   /** Finish the recording. */
   void record();
 }
