@@ -91,7 +91,7 @@ public class ScreenshotImpl {
 
       Instrumentation instrumentation = Registry.getRegistry().instrumentation;
 
-      sInstance = create(instrumentation.getContext());
+      sInstance = create(instrumentation.getTargetContext());
 
       return sInstance;
     }
